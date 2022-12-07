@@ -1,0 +1,42 @@
+[app]
+PageSize = 10
+JwtSecret = 233
+PrefixUrl = http://127.0.0.1:8000
+
+RuntimeRootPath = runtime/
+# dev, docker or prod
+Env = dev
+
+LogSavePath = logs/
+LogSaveName = log
+LogFileExt = log
+TimeFormat = 20060102
+
+[server]
+#debug or release
+RunMode = debug
+HttpPort = 8000
+ReadTimeout = 60
+WriteTimeout = 60
+
+[database]
+Type = postgresql
+User = postgres
+Password = password
+Host = localhost
+Port = 6001
+Name = db
+Sslmode = disable
+
+[logger]
+Output = stdout
+OutputFile = logs/server.log
+# Levels(1:fatal 2:error,3:warn,4:info,5:debug,6:trace)
+Level = 5
+# text/json
+Format = text
+
+#Google Cloud API seting to acces bucket
+[googleCloud]
+BucketName = 
+CredentialFile = 
